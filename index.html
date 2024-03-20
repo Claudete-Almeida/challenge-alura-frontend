@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input id="input" type="text" value="Claudete" placeholder="cripitografar/descriptografar">
+        <button id="btcripto" onclick="cripto()" >Criptografar</button>
+        <button id="btdecripto" onclick="decripto()">Descriptografar</button> 
+    </div>
+    <h3 id="resultado"></h3>
+</body>
+<script>  
+    function cripto () {
+        var input = document.getElementById('input').value;
+        var result = input
+            .replace(/e/g, 'enter')
+            .replace(/i/g, 'imes')
+            .replace(/a/g, 'ai')
+            .replace(/o/g, 'ober')
+            .replace(/u/g, 'ufat');
+
+            document.getElementById("resultado").innerHTML = result
+    }
+    function decripto () {
+        var input = document.getElementById('input').value;
+        var result = input
+            .replace(/enter/g, 'e')
+            .replace(/imes/g, 'i')
+            .replace(/ai/g, 'a')
+            .replace(/ober/g, 'o')
+            .replace(/ufat/g, 'u');
+
+            document.getElementById("resultado").innerHTML = result
+    }
+</script>
+</html>
